@@ -1,4 +1,3 @@
-# Import Libraries
 import pandas as pd
 import numpy as np
 import string
@@ -44,7 +43,6 @@ print(f"Model Accuracy: {accuracy_score(y_test, y_pred) * 100:.2f}%")
 
 # -------------------- GUI Application --------------------
 
-# Prediction Function
 def predict_email():
     email_text = text_input.get("1.0", tk.END)
     processed_text = preprocess(email_text)
@@ -58,7 +56,6 @@ def predict_email():
     
     messagebox.showinfo("Prediction Result", result)
 
-# Build GUI
 window = tk.Tk()
 window.title("Spam Email Classifier")
 window.geometry("500x400")
