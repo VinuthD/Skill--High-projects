@@ -1,7 +1,6 @@
 import tkinter as tk
 from tkinter import scrolledtext
 
-# -------------------- Chatbot Logic --------------------
 
 def chatbot_response(user_input):
     user_input = user_input.lower()
@@ -30,8 +29,6 @@ def chatbot_response(user_input):
     else:
         return "I'm sorry, I didn't understand that. Can you please rephrase your question?"
 
-# -------------------- GUI Application --------------------
-
 def send_message():
     user_msg = user_input.get()
     if user_msg.strip() == "":
@@ -58,11 +55,9 @@ chat_area = scrolledtext.ScrolledText(window, wrap=tk.WORD, font=("Arial", 13), 
 chat_area.place(relx=0.05, rely=0.12, relwidth=0.9, relheight=0.65)
 chat_area.config(state='normal')
 
-# Styling chat messages
 chat_area.tag_config("user", foreground="lightgreen")
 chat_area.tag_config("bot", foreground="cyan")
 
-# Input frame
 input_frame = tk.Frame(window, bg="black")
 input_frame.place(relx=0.05, rely=0.8, relwidth=0.9, relheight=0.1)
 
